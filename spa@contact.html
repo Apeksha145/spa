@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Spa Care</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="assets/css/bootstrap.css" rel="stylesheet" />
+		<link href="assets/animate.css-master/animate.css" rel="stylesheet" />
+		<script src="assets/js/jquery.min.js" rel="stylesheet"></script>
+		<script src="assets/js/bootstrap.js" rel="stylesheet"></script>
+		<link href="assets/css/font-awesome.css" rel="stylesheet" />
+		<script src="assets/js/wow.min.js" rel="stylesheet"></script>
+		<script>
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction()
+			{
+				if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) 
+				{
+					document.getElementById("logo").style.fontSize = "20px";
+				} 
+				else 
+				{
+					document.getElementById("logo").style.fontSize = "40px";
+				}
+			}
+			new WOW().init();
+			$(document).ready(function(){
+			  $(window).scroll(function() {
+				$(".slideanim").each(function(){
+				  var pos = $(this).offset().top;
+				  var winTop = $(window).scrollTop();
+					if (pos < winTop + 700) {
+					  $(this).addClass("slide");
+					}
+				});
+			  });
+			})
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip(); 
+			});
+		</script>
+		<style>
+			body{
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+			.social
+			{
+			text-align:center;
+			}
+			#logo
+			{
+			color:white;
+			font-size:40px; 
+			font-weight: bold;
+			top: 0;
+			width: 100%;
+			transition: 0.9s;
+			border-bottom:6px solid white;
+			border-radius:50%;
+			}
+			.navbar-inverse .navbar-nav > li > a
+			{
+			letter-spacing:4px;
+			}
+			.navbar
+			{
+			border-radius:0;
+			margin-bottom:0;
+			border: 0;
+			}
+			.navbar-inverse .navbar-brand
+			{
+			height:50px;
+			color:white;
+			font-weight: bold;
+			border-bottom:5px solid white;
+			border-radius:50%;
+			}
+			/* media query start here */
+			@media only screen and (max-width:1024px)
+			{
+				#welimg img
+				{
+				height:fit-content;
+				}
+			}
+		/* media query start here */
+			@media only screen and (max-width:600px)
+			{
+			.top-bar
+			{
+				display:none;
+			}
+			.navbar-inverse .navbar-brand 
+			{
+			height:20px;
+			color:white;
+			font-weight: bold;
+			width: 100%;
+			border-bottom:5px solid white;
+			border-radius:50%;
+			display:block;
+			margin-bottom: 4px;
+			}
+			.navbar-inverse .navbar-brand p
+			{
+			margin-top:-49px;
+			}
+			#spa1 p.welcome:after 
+			{
+			display:none;
+			}
+			.heading .fa
+			{
+			display:none;
+			}
+			h1.heading:after
+			{
+			display:none;
+			}
+			#cntbtn button
+			{
+			font-size: 10px;
+			}
+			}
+			/* media query start here */
+			@media only screen and (max-width:768px)
+			{
+			#cntbtn button
+			{
+			font-size:12px;
+			}
+			.navbar-right {
+			font-size: 11px;
+			}
+			}
+			/* media query start here */
+			@media only screen and (max-width:1024px)
+			{
+			#bimg{
+			margin-top:60px;
+			}
+			.callout
+			{
+			display:none;
+			}
+			}
+			.dropdown 
+			{
+			position:relative;
+			display:inline-block;
+			}
+			.dropdown-content 
+			{
+			display:none;
+			position:absolute;
+			background-color: #222;
+			min-width:300px;
+			box-shadow: 0 4px 10px rgba(0,0,0,.33);
+			border-radius: 2px;
+			z-index:1;
+			padding:0px;
+			}
+			.dropdown-content li 
+			{
+			list-style-type:none;
+			}
+			.dropdown-content a
+			{
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			}
+			.dropdown-content a:hover
+			{
+			background-color: #d2cccc;
+			color:black;
+			}
+			.dropdown:hover .dropdown-content
+			{
+			display: block;border-top:2px solid grey;
+			}
+			.dropdown:hover .dropbtn 
+			{
+			background-color: #3e8e41;
+			}
+			.carousel-control.left,.carousel-control.right
+			{
+			background-image:none
+			}
+			#spa
+			{
+			color:dimgrey;
+			background:linear-gradient(180deg,#251c1cb8 0,#000);
+			text-align:center;
+			text-align:justify;
+			}
+			#spa p:hover
+			{
+			color:white;		
+			}
+			#spa1
+			{
+			color:#000;
+			height:auto;
+			}
+			#bgimg-3 
+			{
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			  background-image: url("assets/images/beautyback.jpg");
+			  overflow:hidden;
+			}
+			.heading
+			{
+			text-align:center;
+			background-color:transparent;
+			color:#f7f7f7;
+			padding-top:150px;
+			font-size:60px;
+			letter-spacing:7px;
+			}
+			#spa3
+			{
+			color:#777;
+			background: linear-gradient(180deg,#0000003d 0,#f0d3d385);
+			text-align:center;
+			text-align: justify;
+			}
+			#spa4
+			{
+			color:#ddd;
+			background-color:#282E34;
+			text-align:justify;
+			}
+			#spaa
+			{
+			color:#ddd;
+			background-color:#222;
+			text-align:justify;
+			padding: 40px 0px;
+			}
+			#spaa p
+			{
+			color: #999999;
+			}
+			.hh a
+			{
+			color:#ddd;
+			text-decoration:none;
+			font-size: 12px;
+			}
+			.hh a:hover 
+			{
+			color:grey;
+			}
+			#sp
+			{
+			text-align:center;
+			}
+			.carousel-indicators
+			{
+			display:none;
+			}
+		   .slideanim 
+		   {
+		   visibility:hidden;
+		   }
+		  .slide 
+		  {
+		  animation-name: slide;
+		  -webkit-animation-name: slide;
+		  animation-duration: 2s;
+		  -webkit-animation-duration: 2s;
+		  visibility: visible;
+		  }
+		  @keyframes slide 
+		  {
+			0% {
+			  opacity: 0;
+			  transform: translateY(70%);
+			} 
+			100% {
+			  opacity: 1;
+			  transform: translateY(0%);
+			}
+		  }
+		  @-webkit-keyframes slide 
+		  {
+			0% {
+			  opacity: 0;
+			  -webkit-transform: translateY(70%);
+			} 
+			100% {
+			  opacity: 1;
+			  -webkit-transform: translateY(0%);
+			}
+		  }
+		  #map 
+		  {
+			width:88%;
+			margin-left: auto;
+			height:317px;
+			margin-right: auto;
+			color:black;
+			text-align:center;
+			background-position:center;
+			background-repeat:no-repeat;
+			background-size:cover;
+			border: 1px dashed white;
+		  }
+		.hov a
+		  {
+		  color:rgba(95, 158, 160, 0.45);
+		  background-color:rgba(128, 128, 128, 0.22);padding:3px;
+		  text-decoration:none;
+		  }
+		  .hov a:hover
+		  {
+		  color:white;
+		  }
+		  #border
+		  {
+			border:2px solid white;
+			margin-top:50px;
+			margin-bottom:50px;
+			height:400px;
+		  }
+		  .callout 
+		  {
+			  position: fixed;
+			  bottom: 60px;
+			  right: 20px;
+			  margin-left: 20px;
+			  max-width: 300px;
+			 
+			}
+			.callout-header {
+			  padding: 25px 15px;
+			  background:white;
+			  font-size: 30px;
+			  color:#222;
+			}
+			.callout-container 
+			{
+			  padding: 15px;
+			  background-color: #222;
+			  color:white;
+			}
+			.closebtn {
+			  position: absolute;
+			  top: 5px;
+			  right: 15px;
+			  color: #222;
+			  font-size: 30px;
+			  cursor: pointer;
+			}
+			.closebtn:hover {
+			  color: lightgrey;
+			}
+			/* media query start here */
+			@media only screen and (min-width:768px)
+			{
+			.navbar-inverse .navbar-brand p
+			{
+			font-size:18px;
+			}
+			}	
+			/* media query start here */
+			@media only screen and (min-width:1024px)
+			{
+				.navbar-inverse .navbar-brand p
+			{
+			font-size:17px;
+			}
+			}
+			/* media query start here */
+			@media only screen and (min-width:320px)
+			{
+			#bgimg-3 i
+			{
+			font-size:50px;
+			}
+			#cntbtn button
+			{
+			font-size:10px;
+			}
+			}
+		</style>
+	</head>
+	<body id="myPage">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="container">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				  </button>
+				  <a class="navbar-brand" href="spa@proindex.html" style="font-size:25px;text-decoration:none;margin-bottom:10px;margin-left: 2px;">
+					<p><i class="fa fa-bed fa-1x"></i> Four Seasons</p>				  
+				  </a>
+				</div> 
+				<div class="collapse navbar-collapse" id="myNavbar" style="font-size:15px;padding-left:55px;padding-top:2px;">
+				  <ul class="nav navbar-nav navbar-right">
+				    <li>
+						<a href="spa@proindex.html">WELCOME</a>
+					</li>
+					<li class=" dropdown">
+						<a href="spa@program.html">PROGRAMS</a>
+					</li>
+					<li class="dropdown">
+						<a href="#services" class="dropdown-toggle" data-toggle="dropdown">SPA&nbsp;<span class="caret"></span></a>
+						<ul class="dropdown-content">
+						  <li><a href="#">Baliness Massage</a></li>
+						  <li><a href="#">Aromatherapy</a></li>
+						  <li><a href="#">Deep Tissue Massage</a></li>
+						  <li><a href="#">Swedish Massage</a></li>
+						  <li><a href="#">Foot Reflexology</a> </li>
+						  <li><a href="#">Traditional Thai Massage</a> </li>
+						  <li><a href="#">Body Scrub</a> </li>
+						  <li><a href="#">Neck and Back Massage</a> </li>
+						</ul>
+					</li>
+					<li>
+						<a href="spa@lookbook.html">LOOKBOOK</a>
+					</li>
+					<li>
+						<a href="spa@contact.html">CONTACT</a>
+					</li>
+					<li>
+						<a href="spa@more.html" data-toggle="collapse" data-target="#demo">
+						MORE...</a>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+		</nav> 
+		<div id="bgimg-3">
+			<div style="padding-top:55px;padding-bottom:0px;" id="bimg">
+			<div class="container">					
+				<div id="border">
+					<div class="row">
+						<div class="col-sm-12">
+							<h1 class="heading wow bounce">
+							 <i>Contact Us</i>
+							</h1>
+						</div>
+					</div>	
+				</div>
+				</div>
+			</div>
+		</div>
+		<div id="spa1">
+			<div class="container">
+				<div class="row">
+					<div style="padding:50px 0px;">
+						<div class="col-sm-12">
+						<h1 style="color:#ad702c;text-align:center;"><i class="fa fa-bed" style="color:black;font-size:28px;"></i><br />LOCATE US</h1>
+							<div style="height:auto;background-color:#222;color:white;box-shadow:0 0 20px black;padding:20px 30px 0px 30px;margin-top: 45px;">
+								<div class="row">
+									<div class="col-sm-8 well well-sm">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.154119354255!2d77.1132299154965!3d28.714939787096352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d015aebf7e051%3A0xfc1f1b74b1264d0!2sRohini+West!5e0!3m2!1sen!2sin!4v1537876415229" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+									</div>					
+									<div class="col-sm-4">
+										<div style="margin-left:30px;padding-top:20px;padding-bottom:20px;">
+										<h4>ADDRESS</h4>
+										<div>
+											<p style="color:#999999;padding-top:10px;"><span class="fa fa-map" style="font-size: 20px;color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; 123 Street W, Seattle WA 99999 <br />Paris, France.</p>
+											<p style="color:#999999;padding-top:10px;"><span class="fa fa-phone" style="font-size: 20px;color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; +12 345 567 7890</p>
+											<p style="color:#999999;padding-top:10px;"><span class="fa fa-envelope" style="font-size: 20px;color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; fourseason@gmail.com</p>
+										</div>
+										<h4 style="padding-top:25px;">OPENING HOURS</h4>
+										<div>
+											<p style="color:#999999;padding-top:10px;"><span class="fa fa-clock-o" style="font-size: 20px;color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; Monday-Friday: 8am-8pm</p>
+											<p style="color:#999999;padding-top:10px;"><span class="fa fa-clock-o" style="font-size: 20px;color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; Saturday and Sunday: 10am-4pm</p>
+										</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="spa1">
+			<div class="container">
+				<div class="row">
+					<div style="padding:50px 0px;">
+						<div class="col-sm-12">
+							<h1 style="color:#ad702c;text-align:center;"><i class="fa fa-bed" style="color:black;font-size:28px;"></i><br />MAKE AN APPOINTMENT</h1>
+							<div style="height:450px;background-color:white;color:black;box-shadow:0 0 20px #ccc;padding-top:30px;    margin-top: 45px;">
+								<div class="row">
+								<div class="col-sm-4 col-xs-3"></div>
+									<div class="col-sm-4 col-xs-6">
+										<div style="padding-top:20px;">
+											<form  class="form-horizontal" action="/action_page.php">
+												<div class="row form-group">
+													<input type="email" class="form-control" id="email" placeholder="Your Name">
+												</div>
+												<div class="row form-group">
+													<input type="email" class="form-control" id="email" placeholder="Your Email">
+												</div>
+												<div class="row form-group">
+													<input type="email" class="form-control" id="email" placeholder="Phone Number">
+												</div>
+												<div class="row form-group">
+													<input type="email" class="form-control" id="email" placeholder="Date Of Appoinment">
+												</div>
+												<div class="row form-group">
+													<textarea class="form-control" id="email" placeholder="Your Message Here"  rows="4"></textarea>
+												</div>
+												<div class="row form-group" id="cntbtn"align="center">
+													<div class="col-sm-12 col-xs-12">
+													<button type="email" class="btn btn-default btn-lg" style="background-color:#222;color:rgba(255, 255, 255, 0.8);border:0;margin-left:-8px;">MAKE AN APPOINMENT</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+									<div class="col-sm-4 col-xs-3"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="height:50px"></div>
+		<div id="spa4">
+			<div class="container">
+				<div style="padding: 30px 15px 10px 15px;">
+				<div class="row">
+					<div class="col-sm-3 hh">
+						<h4 style="color:#bb966d;"><i><u>About</u></i></h4>
+						<p><a href="#"><i class="fa fa-user"style="display:none;"id="f"></i>ABOUT US</a></p>
+						<p><a href="#">CAREERS</a></p>
+						<p><a href="#">CONTACT US</a></p>
+					</div>
+					<div class="col-sm-3 hh">
+						<h4 style="color:#bb966d;"><i><u>Reservations</u></i></h4>
+						<p><a href="#">REQUEST AN INVOICE</a></p>
+						<p><a href="#">FIND A RESERVATION</a></p>
+						<p><a href="#">EMAIL PREFERENCES</a></p>
+					</div>
+					<div class="col-sm-3 hh">
+						<h4 style="color:#bb966d;"><i><u>News</u></i></h4>
+						<p><a href="#">PRESS ROOM</a></p>
+						<p><a href="#">NEW OPENINGS</a></p>
+						<p><a href="#">MAGAZINE</a></p>
+						<p><a href="#">NEWSLETTER</a></p>
+					</div>
+					<div class="col-sm-3 hh">
+						<h4 style="color:#bb966d;"><i><u>Address</u></i></h4>
+						<div>
+							<p><span class="fa fa-map" style="color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; 123 Street W, Seattle WA 99999 <br />Paris, France.</p>
+							<p><span class="fa fa-phone" style="color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; +12 345 567 7890</p>
+							<p><span class="fa fa-envelope" style="color:rgba(95, 158, 160, 0.45);"></span>&nbsp;&nbsp; fourseason@gmail.com</p>
+						</div>
+					</div>
+				</div>
+				<div style="background-color:grey;width:100%;height:2px;margin:30px 0px;"></div>
+					<div class="row">
+						<div class="col-sm-5">
+							<p style="color:rgba(95, 158, 160, 0.45);font-weight:bold;text-align:center;">Website Designed By-<a href="http://ethical.in/" style="color:#bb966d;font-weight:normal;font-size:12px;">Ethical Web Solutions</a></p>
+						</div>
+						<div class="col-sm-2" align="center">
+							<a class="fa fa-arrow-circle-up fa-2x"  href="#myPage" title="To Top" data-toggle="tooltip" style="color:rgba(95, 158, 160, 0.45);text-decoration:none;font-weight:bold;padding-bottom:20px;"></a>
+						</div>
+						<div class="col-sm-5" align="center">
+							<span class="hov">
+								<a class="fa fa-facebook" href="#"></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a class="fa fa-twitter" href="#"></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a class="fa fa-google" href="#"></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a class="fa fa-instagram" href="#"></a>
+								&nbsp;&nbsp;&nbsp;&nbsp;<a class="fa fa-behance" href="#"></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="callout">
+		  <div class="callout-header">EXCLUSIVE OFFER FOR YOU</div>
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+		  <div class="callout-container">
+			<p>Complimentary perks, best rate guaranteed and personalized service when you book with us.</p>
+			<a href="#"style="color:rgba(95, 158, 160, 0.45);">Reveal Offer <i class="fa fa-long-arrow-right custom"></i></a> 
+		  </div>
+		</div>
+	</body>
+</html>
